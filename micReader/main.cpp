@@ -8,10 +8,16 @@
 
 #include <iostream>
 #include "micReader.hpp"
+#include "constants.h"
 
 int main(int argc, const char * argv[]) {
     std::auto_ptr<MicReader> mr(new MicReader());
-    mr->StartRecording();
+    frame_t *buffer = mr->GetOneSampleBlock();
+    for(int i = 0; i < FRAMES_PER_BUFFER; ++i){
+        std::cout << buffer[i];
+    }
+    std::cout << std::endl;
+    return 0;
 }
 
 

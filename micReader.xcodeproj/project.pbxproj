@@ -44,6 +44,7 @@
 		BC427ED91FB3A78C003D4A69 /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
 		BC427EDC1FB5D693003D4A69 /* micReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = micReader.cpp; sourceTree = "<group>"; };
 		BC427EDD1FB5D693003D4A69 /* micReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = micReader.hpp; sourceTree = "<group>"; };
+		BC427EDF1FB5E068003D4A69 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 				BC427EDA1FB5D611003D4A69 /* micReder */,
 				BC427ED91FB3A78C003D4A69 /* portaudio.h */,
 				BC0D75D01FAEFFD5001FDC60 /* main.cpp */,
+				BC427EDF1FB5E068003D4A69 /* constants.h */,
 			);
 			path = micReader;
 			sourceTree = "<group>";

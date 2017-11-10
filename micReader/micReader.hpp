@@ -11,22 +11,19 @@
 
 #include <iostream>
 #include "portaudio.h"
-
-#define SAMPLE_RATE (44100)
-#define NUM_CHANNELS 1
-#define PA_SAMPLE_TYPE paInt16
-#define FRAMES_PER_BUFFER 100
+#include "constants.h"
 
 class MicReader {
 private:
     PaError err;
-    __int16_t *sampleBlock;
+    frame_t *sampleBlock;
     PaStreamParameters inputParameters;
     PaStreamParameters outputParameters;
     PaStream *stream;
 public:
     MicReader();
     void StartRecording();
+    frame_t* GetOneSampleBlock();
     ~MicReader();
 };
 
