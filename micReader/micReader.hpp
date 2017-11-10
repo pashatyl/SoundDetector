@@ -15,7 +15,7 @@
 #define SAMPLE_RATE (44100)
 #define NUM_CHANNELS 1
 #define PA_SAMPLE_TYPE paInt16
-#define FRAMES_PER_BUFFER 1000
+#define FRAMES_PER_BUFFER 100
 
 class MicReader {
 private:

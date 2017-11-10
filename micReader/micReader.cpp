@@ -60,6 +60,7 @@ void MicReader::StartRecording(){
 }
 
 MicReader::~MicReader(){
+    delete[] sampleBlock;
     err = Pa_StopStream( stream );
     HandleError(err);
     err = Pa_CloseStream( stream );
