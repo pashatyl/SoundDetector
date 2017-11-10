@@ -7,9 +7,43 @@
 //
 
 #include <iostream>
+#include "micReader.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    std::auto_ptr<MicReader> mr(new MicReader());
+    mr->StartRecording();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BC0D75D11FAEFFD5001FDC60 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC0D75D01FAEFFD5001FDC60 /* main.cpp */; };
+		BC427EC81FB39E75003D4A69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427EC61FB39E75003D4A69 /* AudioToolbox.framework */; };
+		BC427EC91FB39E75003D4A69 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427EC71FB39E75003D4A69 /* AudioUnit.framework */; };
+		BC427ECB1FB39E7E003D4A69 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ECA1FB39E7E003D4A69 /* CoreServices.framework */; };
+		BC427ECD1FB39E85003D4A69 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ECC1FB39E85003D4A69 /* Carbon.framework */; };
+		BC427ED41FB3A1A9003D4A69 /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ED31FB3A1A9003D4A69 /* libportaudio.a */; };
+		BC427ED61FB3A3E8003D4A69 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ED51FB3A3E8003D4A69 /* CoreFoundation.framework */; };
+		BC427ED81FB3A40B003D4A69 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ED71FB3A40B003D4A69 /* CoreAudio.framework */; };
+		BC427EDE1FB5D693003D4A69 /* micReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC427EDC1FB5D693003D4A69 /* micReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,17 @@
 /* Begin PBXFileReference section */
 		BC0D75CD1FAEFFD5001FDC60 /* micReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = micReader; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0D75D01FAEFFD5001FDC60 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BC0D75D81FAF0026001FDC60 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		BC427EC61FB39E75003D4A69 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BC427EC71FB39E75003D4A69 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		BC427ECA1FB39E7E003D4A69 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		BC427ECC1FB39E85003D4A69 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		BC427ED31FB3A1A9003D4A69 /* libportaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libportaudio.a; sourceTree = "<group>"; };
+		BC427ED51FB3A3E8003D4A69 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BC427ED71FB3A40B003D4A69 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BC427ED91FB3A78C003D4A69 /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
+		BC427EDC1FB5D693003D4A69 /* micReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = micReader.cpp; sourceTree = "<group>"; };
+		BC427EDD1FB5D693003D4A69 /* micReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = micReader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC427ED81FB3A40B003D4A69 /* CoreAudio.framework in Frameworks */,
+				BC427ED61FB3A3E8003D4A69 /* CoreFoundation.framework in Frameworks */,
+				BC427ECD1FB39E85003D4A69 /* Carbon.framework in Frameworks */,
+				BC427ECB1FB39E7E003D4A69 /* CoreServices.framework in Frameworks */,
+				BC427EC81FB39E75003D4A69 /* AudioToolbox.framework in Frameworks */,
+				BC427ED41FB3A1A9003D4A69 /* libportaudio.a in Frameworks */,
+				BC427EC91FB39E75003D4A69 /* AudioUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +69,7 @@
 			children = (
 				BC0D75CF1FAEFFD5001FDC60 /* micReader */,
 				BC0D75CE1FAEFFD5001FDC60 /* Products */,
+				BC0D75D71FAF0026001FDC60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +84,35 @@
 		BC0D75CF1FAEFFD5001FDC60 /* micReader */ = {
 			isa = PBXGroup;
 			children = (
+				BC427EDA1FB5D611003D4A69 /* micReder */,
+				BC427ED91FB3A78C003D4A69 /* portaudio.h */,
 				BC0D75D01FAEFFD5001FDC60 /* main.cpp */,
 			);
 			path = micReader;
+			sourceTree = "<group>";
+		};
+		BC0D75D71FAF0026001FDC60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC427ED71FB3A40B003D4A69 /* CoreAudio.framework */,
+				BC427ED51FB3A3E8003D4A69 /* CoreFoundation.framework */,
+				BC427ED31FB3A1A9003D4A69 /* libportaudio.a */,
+				BC427ECC1FB39E85003D4A69 /* Carbon.framework */,
+				BC427ECA1FB39E7E003D4A69 /* CoreServices.framework */,
+				BC427EC61FB39E75003D4A69 /* AudioToolbox.framework */,
+				BC427EC71FB39E75003D4A69 /* AudioUnit.framework */,
+				BC0D75D81FAF0026001FDC60 /* CoreAudioKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC427EDA1FB5D611003D4A69 /* micReder */ = {
+			isa = PBXGroup;
+			children = (
+				BC427EDC1FB5D693003D4A69 /* micReader.cpp */,
+				BC427EDD1FB5D693003D4A69 /* micReader.hpp */,
+			);
+			name = micReder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC427EDE1FB5D693003D4A69 /* micReader.cpp in Sources */,
 				BC0D75D11FAEFFD5001FDC60 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ASMKE943RN;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -228,6 +286,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ASMKE943RN;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -251,6 +313,7 @@
 				BC0D75D61FAEFFD5001FDC60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
