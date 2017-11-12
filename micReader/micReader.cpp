@@ -15,7 +15,7 @@ void HandleError(PaError err){
 }
 
 MicReader::MicReader(){
-    sampleBlock = new frame_t(FRAMES_PER_BUFFER);
+    sampleBlock = new frame_t[FRAMES_PER_BUFFER]{};
     
     err = Pa_Initialize();
     HandleError(err);
@@ -46,7 +46,7 @@ MicReader::MicReader(){
 }
 
 void MicReader::StartRecording(){
-    for(int i=0; i<(10*SAMPLE_RATE)/FRAMES_PER_BUFFER; ++i )
+    for(int i=0; i<(30*SAMPLE_RATE)/FRAMES_PER_BUFFER; ++i )
     {
         err = Pa_WriteStream( stream, sampleBlock, FRAMES_PER_BUFFER );
         HandleError(err);
@@ -60,12 +60,11 @@ void MicReader::StartRecording(){
 }
 
 frame_t* MicReader::GetOneSampleBlock(){
-    frame_t *buffer = new frame_t(FRAMES_PER_BUFFER);
-    Pa_WriteStream(stream, buffer, FRAMES_PER_BUFFER);
-//    for(int i = 0; i < FRAMES_PER_BUFFER; ++i){
-//        std::cout << buffer[i];
-//    }
-//    std::cout << std::endl;
+    frame_t *buffer = new frame_t[NUM_SAMPLES]{};
+    for (int i = 0; i < NUM_SAMPLES; i += FRAMES_PER_BUFFER){
+        err = Pa_ReadStream( stream, buffer + i, FRAMES_PER_BUFFER );
+    }
+    HandleError(err);
     return buffer;
 }
 
