@@ -16,6 +16,8 @@
 		BC427ED61FB3A3E8003D4A69 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ED51FB3A3E8003D4A69 /* CoreFoundation.framework */; };
 		BC427ED81FB3A40B003D4A69 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ED71FB3A40B003D4A69 /* CoreAudio.framework */; };
 		BC427EDE1FB5D693003D4A69 /* micReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC427EDC1FB5D693003D4A69 /* micReader.cpp */; };
+		BCA6A50E1FBDD6B10052BAD3 /* wavWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCA6A50C1FBDD6B10052BAD3 /* wavWriter.cpp */; };
+		BCA6A5121FBF60540052BAD3 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCA6A5101FBF60540052BAD3 /* detector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +47,10 @@
 		BC427EDC1FB5D693003D4A69 /* micReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = micReader.cpp; sourceTree = "<group>"; };
 		BC427EDD1FB5D693003D4A69 /* micReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = micReader.hpp; sourceTree = "<group>"; };
 		BC427EDF1FB5E068003D4A69 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		BCA6A50C1FBDD6B10052BAD3 /* wavWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavWriter.cpp; sourceTree = "<group>"; };
+		BCA6A50D1FBDD6B10052BAD3 /* wavWriter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = wavWriter.hpp; sourceTree = "<group>"; };
+		BCA6A5101FBF60540052BAD3 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detector.cpp; sourceTree = "<group>"; };
+		BCA6A5111FBF60540052BAD3 /* detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = detector.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 		BC0D75CF1FAEFFD5001FDC60 /* micReader */ = {
 			isa = PBXGroup;
 			children = (
+				BCA6A50F1FBF603C0052BAD3 /* Detector */,
+				BCA6A50B1FBDC7510052BAD3 /* WavWriter */,
 				BC427EDA1FB5D611003D4A69 /* micReder */,
 				BC427ED91FB3A78C003D4A69 /* portaudio.h */,
 				BC0D75D01FAEFFD5001FDC60 /* main.cpp */,
@@ -115,6 +123,24 @@
 				BC427EDD1FB5D693003D4A69 /* micReader.hpp */,
 			);
 			name = micReder;
+			sourceTree = "<group>";
+		};
+		BCA6A50B1FBDC7510052BAD3 /* WavWriter */ = {
+			isa = PBXGroup;
+			children = (
+				BCA6A50C1FBDD6B10052BAD3 /* wavWriter.cpp */,
+				BCA6A50D1FBDD6B10052BAD3 /* wavWriter.hpp */,
+			);
+			name = WavWriter;
+			sourceTree = "<group>";
+		};
+		BCA6A50F1FBF603C0052BAD3 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				BCA6A5101FBF60540052BAD3 /* detector.cpp */,
+				BCA6A5111FBF60540052BAD3 /* detector.hpp */,
+			);
+			name = Detector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC427EDE1FB5D693003D4A69 /* micReader.cpp in Sources */,
+				BCA6A50E1FBDD6B10052BAD3 /* wavWriter.cpp in Sources */,
 				BC0D75D11FAEFFD5001FDC60 /* main.cpp in Sources */,
+				BCA6A5121FBF60540052BAD3 /* detector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
