@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC0D75D11FAEFFD5001FDC60 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC0D75D01FAEFFD5001FDC60 /* main.cpp */; };
+		BC1010D91FCACDA800D8D6B7 /* SyncronizedQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC1010D71FCACDA800D8D6B7 /* SyncronizedQueue.cpp */; };
 		BC427EC81FB39E75003D4A69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427EC61FB39E75003D4A69 /* AudioToolbox.framework */; };
 		BC427EC91FB39E75003D4A69 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427EC71FB39E75003D4A69 /* AudioUnit.framework */; };
 		BC427ECB1FB39E7E003D4A69 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC427ECA1FB39E7E003D4A69 /* CoreServices.framework */; };
@@ -36,6 +37,8 @@
 		BC0D75CD1FAEFFD5001FDC60 /* micReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = micReader; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0D75D01FAEFFD5001FDC60 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BC0D75D81FAF0026001FDC60 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		BC1010D71FCACDA800D8D6B7 /* SyncronizedQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SyncronizedQueue.cpp; sourceTree = "<group>"; };
+		BC1010D81FCACDA800D8D6B7 /* SyncronizedQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SyncronizedQueue.hpp; sourceTree = "<group>"; };
 		BC427EC61FB39E75003D4A69 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BC427EC71FB39E75003D4A69 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		BC427ECA1FB39E7E003D4A69 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,7 @@
 		BC0D75CF1FAEFFD5001FDC60 /* micReader */ = {
 			isa = PBXGroup;
 			children = (
+				BCCA681C1FC977BE006F40A6 /* SyncronizedQueue */,
 				BCA6A50F1FBF603C0052BAD3 /* Detector */,
 				BCA6A50B1FBDC7510052BAD3 /* WavWriter */,
 				BC427EDA1FB5D611003D4A69 /* micReder */,
@@ -141,6 +145,15 @@
 				BCA6A5111FBF60540052BAD3 /* detector.hpp */,
 			);
 			name = Detector;
+			sourceTree = "<group>";
+		};
+		BCCA681C1FC977BE006F40A6 /* SyncronizedQueue */ = {
+			isa = PBXGroup;
+			children = (
+				BC1010D71FCACDA800D8D6B7 /* SyncronizedQueue.cpp */,
+				BC1010D81FCACDA800D8D6B7 /* SyncronizedQueue.hpp */,
+			);
+			name = SyncronizedQueue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC427EDE1FB5D693003D4A69 /* micReader.cpp in Sources */,
+				BC1010D91FCACDA800D8D6B7 /* SyncronizedQueue.cpp in Sources */,
 				BCA6A50E1FBDD6B10052BAD3 /* wavWriter.cpp in Sources */,
 				BC0D75D11FAEFFD5001FDC60 /* main.cpp in Sources */,
 				BCA6A5121FBF60540052BAD3 /* detector.cpp in Sources */,
@@ -304,11 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ASMKE943RN;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -316,11 +329,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ASMKE943RN;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
 		};

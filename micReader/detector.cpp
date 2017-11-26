@@ -8,15 +8,27 @@
 
 #include "detector.hpp"
 
-Detector::Detector(frame_t *buffer, unsigned int size){
-    this->buffer = buffer;
+template <class T>
+Detector<T>::Detector(std::auto_ptr<T> &queue, size_t size){
+    this->queue = queue;
     this->bufSize = size;
+    buffer = new frame_t[bufSize];
 }
 
-void Detector::detect(){
-    for(int i = 0; i < bufSize; ++i){
-        if (buffer[i] > sizeof(frame_t) * 8 * BORDER){
-            printf("Bordered!\n");
+template <class T>
+void Detector<T>::detect(){
+    while(true){
+        buffer = queue->pop();
+        for(int i = 0; i < bufSize; ++i){
+            if (buffer[i] > sizeof(frame_t) * 8 * BORDER){
+                printf("Bordered!\n");
+                break;
+            }
         }
     }
+}
+
+template <class T>
+Detector<T>::~Detector(){
+    delete[] buffer;
 }

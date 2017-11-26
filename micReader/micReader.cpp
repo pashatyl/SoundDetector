@@ -45,18 +45,14 @@ MicReader::MicReader(){
     HandleError(err);
 }
 
-void MicReader::StartRecording(){
+template <class T>
+void MicReader::StartRecording(T *queue){
     for(int i=0; i<(30*SAMPLE_RATE)/FRAMES_PER_BUFFER; ++i )
     {
-        err = Pa_WriteStream( stream, sampleBlock, FRAMES_PER_BUFFER );
-        HandleError(err);
-//        for(int i = 0; i < FRAMES_PER_BUFFER; i+=2){
-//            std::cout << sampleBlock[i];
-//        }
-//        std::cout << std::endl;
-        err = Pa_ReadStream( stream, sampleBlock, FRAMES_PER_BUFFER );
-        HandleError(err);
+        err = Pa_ReadStream(stream, sampleBlock, FRAMES_PER_BUFFER );
+        queue->push(sampleBlock);
     }
+    HandleError(err);
 }
 
 frame_t* MicReader::GetOneSampleBlock(){

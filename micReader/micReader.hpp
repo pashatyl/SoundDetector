@@ -22,7 +22,10 @@ private:
     PaStream *stream;
 public:
     MicReader();
-    void StartRecording();
+    
+    template <class T>
+    void StartRecording(T *queue);
+    
     frame_t* GetOneSampleBlock();
     ~MicReader();
 };

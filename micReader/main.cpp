@@ -13,18 +13,22 @@
 #include <math.h>
 #include "wavWriter.hpp"
 #include "detector.hpp"
-
-// Структура, описывающая заголовок WAV файла.
+#include "SyncronizedQueue.hpp"
+#include <vector>
 
 int main(int argc, const char * argv[]) {
     std::auto_ptr<MicReader> mr(new MicReader());
     std::auto_ptr<wavWriter> ww(new wavWriter());
-    frame_t *buffer = mr->GetOneSampleBlock();
+//    std::auto_ptr<SynchronizedQueue<frame_t*>>
+//        que(new SynchronizedQueue<frame_t*>(BUFSIZE));
+    SynchronizedQueue<frame_t*> queue(BUFSIZE);
     
-    ww->write("/Users/pashatyl/docs/test.wav", buffer);
+//    mr->StartRecording(&queue);
     
-    Detector *d = new Detector(buffer, NUM_SAMPLES);
-    d->detect();
+//    ww->write("/Users/pashatyl/docs/test.wav", buffer);
+    
+//    Detector<SynchronizedQueue<frame_t*>> d(queue, NUM_SAMPLES);
+//    d.detect();
     return 0;
 }
 
