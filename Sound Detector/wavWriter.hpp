@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include "constants.h"
 
-#define SUBCHUNC_2_SIZE (NUM_SAMPLES * (NUM_CHANNELS * sizeof(frame_t)))
+#define SUBCHUNC_2_SIZE(x) (x * (NUM_CHANNELS * sizeof(frame_t)))
+#define CHUNC_SIZE(x) (36 + x)
 struct WAVHEADER
 {
     // WAV-формат начинается с RIFF-заголовка:
@@ -24,7 +25,7 @@ struct WAVHEADER
     // Это оставшийся размер цепочки, начиная с этой позиции.
     // Иначе говоря, это размер файла - 8, то есть,
     // исключены поля chunkId и chunkSize.
-    int32_t chunkSize = 36 + SUBCHUNC_2_SIZE;
+    int32_t chunkSize;
     // Содержит символы "WAVE"
     // (0x57415645 в big-endian представлении)
     char format[4] = {'W', 'A', 'V', 'E'};
@@ -58,15 +59,13 @@ struct WAVHEADER
     char subchunk2Id[4] = {'d', 'a', 't', 'a'};
     // numSamples * numChannels * bitsPerSample/8
     // Количество байт в области данных.
-    int32_t subchunk2Size = SUBCHUNC_2_SIZE;
+    int32_t subchunk2Size;
     // Далее следуют непосредственно Wav данные.
 };
 
 class wavWriter{
 public:
-    static int write(const char* filename, frame_t *buffer);
+    static int write(const char* filename, frame_t *buffer, size_t samplesCount);
 };
-
-#include "wavWriter.tcc"
 
 #endif /* wavWriter_hpp */

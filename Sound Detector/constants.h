@@ -16,10 +16,8 @@
 #define FRAMES_PER_BUFFER 100
 #define SAMPLE_RATE (48000)
 #define NUM_CHANNELS 1
-#define BORDER 0.3
+#define BORDER 0.7
 #define BUFSIZE 100000
-
-#define NUM_SAMPLES 480000 //should be FRAMES_PER_BUFFER * n
 
 #define issigned(t) (((t)(-1)) < ((t) 0))
 

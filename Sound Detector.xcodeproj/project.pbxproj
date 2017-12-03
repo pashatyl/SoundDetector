@@ -15,6 +15,7 @@
 		BC47C29E1FCD8DD9002E4A7B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47C29D1FCD8DD9002E4A7B /* Carbon.framework */; };
 		BC47C2A01FCD8DDE002E4A7B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47C29F1FCD8DDE002E4A7B /* CoreServices.framework */; };
 		BC47C2AC1FCD8E04002E4A7B /* micReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC47C2A41FCD8E04002E4A7B /* micReader.cpp */; };
+		BC6DD42B1FD45A8C00452F3A /* wavWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC6DD42A1FD45A8C00452F3A /* wavWriter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		BC47C2A61FCD8E04002E4A7B /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
 		BC47C2A71FCD8E04002E4A7B /* SyncronizedQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SyncronizedQueue.hpp; sourceTree = "<group>"; };
 		BC47C2A91FCD8E04002E4A7B /* wavWriter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = wavWriter.hpp; sourceTree = "<group>"; };
+		BC6DD42A1FD45A8C00452F3A /* wavWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavWriter.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		BC47C28C1FCD8D61002E4A7B /* Sound Detector */ = {
 			isa = PBXGroup;
 			children = (
+				BC6DD42A1FD45A8C00452F3A /* wavWriter.cpp */,
 				BC47C2A11FCD8E04002E4A7B /* constants.h */,
 				BC47C2A21FCD8E04002E4A7B /* detector.hpp */,
 				BC47C2A41FCD8E04002E4A7B /* micReader.cpp */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC47C2AC1FCD8E04002E4A7B /* micReader.cpp in Sources */,
+				BC6DD42B1FD45A8C00452F3A /* wavWriter.cpp in Sources */,
 				BC47C28E1FCD8D61002E4A7B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +311,7 @@
 				BC47C2931FCD8D61002E4A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
